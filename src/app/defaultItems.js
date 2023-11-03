@@ -1,5 +1,3 @@
-import logo from './img/logo.jpg';
-
 export function List(){
     return(
         <>
@@ -13,12 +11,6 @@ export function List(){
             </div>
         </>
         
-    );
-}
-
-export function Logo({size='100px'}){
-    return(
-        <img src={logo} width={size} height={size} className='entrata-da-destra'/>
     );
 }
 

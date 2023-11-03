@@ -1,10 +1,18 @@
 import placeholder from './img/placeholder.jpg';
 import Image from 'next/image';
 
+function imgScroll(scroll){
+
+}
+
 export function Slider(){
     return(
-            <div className='main-article'>
-                <Image src={placeholder.src} alt="PRova" width={500} height={500}/> 
-            </div>
+        <>
+            <button className='slideImage' onClick={imgScroll("left")}>&lt;</button>
+            <Image src={placeholder.src} className='imgSlider' alt="PRova" width={500} height={500}/> 
+            <button className='slideImage' onClick={imgScroll("right")}>&gt;</button>
+        </>
+        
+
     );     
 }

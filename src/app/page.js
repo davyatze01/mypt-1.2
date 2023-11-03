@@ -9,10 +9,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className='main'>
-        <Navbar />
-        <Slider />
-      </div>
+      <Navbar />
+      <Slider />
       
     </>
   )

@@ -34,11 +34,8 @@ export default function Header(){
     }
     return(
         <>
-            
-
             <header>
-                <a id="dropDownMenu" href="#" onClick={menuClick} className="fa drop-menu" style={{ fontSize:30 }}>&#xf0c9;</a>
-                <h1 id='title-home' className='entrata-da-destra'>MY PERSONAL TRAINER</h1>
+                <h1 id='title-home'>MY PERSONAL TRAINER</h1>
             </header>
         </>
     );

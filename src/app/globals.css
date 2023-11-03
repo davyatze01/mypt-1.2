@@ -20,6 +20,13 @@
 
 body{
   background-color: var(--colore-sfondo);
+  
+}
+
+body::after{
+  content: "";
+  clear: both;
+  display: table;
 }
 
 header{
@@ -33,72 +40,35 @@ header{
   margin-left: 10px;
 }
 
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.navbar-container{
   width: 100%;
-  height: 1000px;
+}
+
+ul{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  background-color: var(--colore-primario);
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 ul>li{
-  text-decoration: none;
-  list-style-type: none;
-  margin: 0;
+  display: inline-block;
+  padding: 3px 25px;
   text-align: center;
-  background-color: var(--colore-testo);
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideToLeft 0.5s ease forwards;
-  margin-top: 10px;
-  margin-left: 10px;
-  border-radius: 10px;
+  line-height: 50px;
 }
 
-.rotate-menu-icon{
-  transform: rotate(90deg);
-  transition: transform 0.5s ease;
-}
-
-.rotate-menu-icon-normal{
-  transform: rotate(180deg);
-  transition: transform 0.5s ease;
-}
-
-.entrata-menu{
-  animation: slideFromLeft 0.5s ease forwards;
-}
-
-.rimuovi-menu{
-  opacity: 1;
-  transform: translateX(0);
-  animation: slideToLeft 0.5s ease forwards;
-}
 
 li a{
-  padding: 10px;
   display: block;
   text-decoration: none;
-  color: var(--colore-sfondo);
-  font-weight: bold;
-  font-size: 15px;
-}
-
-li>a:hover{
-  background-color: var(--colore-sfondo);
+  font-size: 20px;
   color: var(--colore-testo);
-  opacity: 0.2;
-  animation: navbarHover 0.5s ease forwards;
 }
 
-.navbar-container{
-  width: 10%;
-  float: left;
-}
-
-.main-article{
-  width: 90%;
-  float: left;
+li:hover{
+  animation: liHover 0.5s ease forwards;
 }
 
 #title-home{
@@ -106,82 +76,39 @@ li>a:hover{
   font-size: 45px;
   color: var(--colore-testo);
   margin-left: 20px;
+  float: right;
 }
 
-#menu{
-  font-family: 'FontSportivo';
+.slideImage{
+  height: 500px;
+  width: 50px;
+  background-color: white;
+  opacity: 0.1;
   font-size: 30px;
-  color: var(--colore-testo);
-  margin-left: 20px;
-  transform: translateX(-150%);
+  font-weight: bold;
+  margin: 20px 20px;
+  border-radius: 30px;
+  float: left;
 }
 
-.entrata-menu-title{
-  animation: slideFromLeftTitleMenu 0.5s ease forwards;
+.slideImage:hover{
+  animation: sliderBtnHover 0.5s ease forwards;
 }
 
-.entrata-menu-wtitle{
-  animation: slideFromLeftTitleWMenu 0.5s ease forwards;
+.imgSlider{
+  float: left;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
-.entrata-da-destra{
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideFromLeftTitle 1.25s ease forwards;
-}
-
-@keyframes slideFromLeft{
+@keyframes liHover {
   to{
-    opacity: 1;
-    transform: translateX(0);
+    background-color: var(--colore-sfondo);
   }
 }
 
-@keyframes slideFromLeftTitle{
+@keyframes sliderBtnHover {
   to{
-    opacity: 1;
-    transform: translateX(-20%);
-  }
-}
-
-@keyframes slideFromLeftTitleWMenu{
-  from{
-    opacity: 1;
-    transform: translateX(-20%);
-  }
-  to{
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideToLeftTitleWMenu{
-  from{
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to{
-    opacity: 1;
-    transform: translateX(-20%);
-  }
-}
-
-@keyframes slideFromLeftTitle{
-  to{
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideToLeft{
-  to{
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes navbarHover {
-  to{
-    opacity: 1;
+    opacity: 0.25;
   }
 }
